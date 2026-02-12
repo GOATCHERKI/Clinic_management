@@ -1,0 +1,82 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "language": "Language",
+    "createAccount": "Create Account",
+    "myProfile": "My Profile",
+    "myAppointments": "My Appointments",
+    "chat": "Chat"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "doctors": "Doctors"
+  },
+  "header": {
+    "healthcareSimplified": "Healthcare Simplified",
+    "yourHealth": "Your Health",
+    "justAClickAway": "Just a Click Away",
+    "healthcareTeam": "Healthcare team",
+    "expertCare": "Expert care when you need it most,\ndelivered with compassion and expertise.",
+    "support": "Support",
+    "specialists": "Specialists",
+    "patients": "Patients",
+    "healthcareIllustration": "Healthcare illustration",
+    "available247": "Available 24/7"
+  },
+  "footer": {
+    "logoAlt": "Smart Clinic Logo",
+    "description": "At Smart Clinic, we are committed to providing accessible, compassionate, and expert healthcare services around the clock. Your health is our priority — always.",
+    "quickLinks": "Quick Links",
+    "ourDoctors": "Our Doctors",
+    "contactUs": "Contact Us",
+    "getInTouch": "Get In Touch",
+    "address": "123 Healthcare Ave,\nMedical District, MD 12345",
+    "phone": "+1 (234) 567-8900",
+    "email": "contact@smartclinic.com",
+    "copyright": "© 2025 Smart Clinic. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "login": "Login",
+    "register": "Register",
+    "createAccount": "Create Account",
+    "signUp": "Sign Up",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "pleaseSignUp": "Please Sign Up to book your appointment",
+    "pleaseLogin": "Please Login to book your appointment",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?"
+  },
+  "appointment": {
+    "book": "Book Appointment",
+    "date": "Date",
+    "time": "Time",
+    "doctor": "Doctor",
+    "service": "Service",
+    "myAppointments": "My Appointments",
+    "upcoming": "Upcoming Appointments",
+    "past": "Past Appointments",
+    "cancel": "Cancel Appointment",
+    "reschedule": "Reschedule"
+  },
+  "profile": {
+    "edit": "Edit Profile",
+    "save": "Save Changes",
+    "personalInfo": "Personal Information",
+    "contactInfo": "Contact Information",
+    "medicalHistory": "Medical History"
+  }
+} 

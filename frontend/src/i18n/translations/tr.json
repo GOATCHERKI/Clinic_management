@@ -1,0 +1,82 @@
+{
+  "common": {
+    "welcome": "Hoş Geldiniz",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "language": "Dil",
+    "createAccount": "Hesap Oluştur",
+    "myProfile": "Profilim",
+    "myAppointments": "Randevularım",
+    "chat": "Sohbet"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "doctors": "Doktorlar"
+  },
+  "header": {
+    "healthcareSimplified": "Sağlık Hizmetleri Basitleştirildi",
+    "yourHealth": "Sağlığınız",
+    "justAClickAway": "Sadece Bir Tık Uzakta",
+    "healthcareTeam": "Sağlık ekibi",
+    "expertCare": "İhtiyacınız olduğunda uzman bakım,\nşefkat ve uzmanlıkla sunulur.",
+    "support": "Destek",
+    "specialists": "Uzmanlar",
+    "patients": "Hastalar",
+    "healthcareIllustration": "Sağlık hizmetleri illüstrasyonu",
+    "available247": "7/24 Hizmetinizde"
+  },
+  "footer": {
+    "logoAlt": "Smart Clinic Logo",
+    "description": "Smart Clinic olarak, 7/24 erişilebilir, şefkatli ve uzman sağlık hizmetleri sunmaya kararlıyız. Sağlığınız her zaman önceliğimizdir.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "ourDoctors": "Doktorlarımız",
+    "contactUs": "Bize Ulaşın",
+    "getInTouch": "İletişime Geçin",
+    "address": "123 Sağlık Caddesi,\nTıp Bölgesi, MD 12345",
+    "phone": "+1 (234) 567-8900",
+    "email": "contact@smartclinic.com",
+    "copyright": "© 2025 Smart Clinic. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Kullanım Koşulları",
+    "cookiePolicy": "Çerez Politikası"
+  },
+  "auth": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "forgotPassword": "Şifremi Unuttum?",
+    "rememberMe": "Beni Hatırla",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "createAccount": "Hesap Oluştur",
+    "signUp": "Kayıt Ol",
+    "fullName": "Ad Soyad",
+    "phoneNumber": "Telefon Numarası",
+    "pleaseSignUp": "Randevu almak için lütfen kayıt olun",
+    "pleaseLogin": "Randevu almak için lütfen giriş yapın",
+    "alreadyHaveAccount": "Zaten hesabınız var mı?",
+    "dontHaveAccount": "Hesabınız yok mu?"
+  },
+  "appointment": {
+    "book": "Randevu Al",
+    "date": "Tarih",
+    "time": "Saat",
+    "doctor": "Doktor",
+    "service": "Hizmet",
+    "myAppointments": "Randevularım",
+    "upcoming": "Yaklaşan Randevular",
+    "past": "Geçmiş Randevular",
+    "cancel": "Randevuyu İptal Et",
+    "reschedule": "Yeniden Planla"
+  },
+  "profile": {
+    "edit": "Profili Düzenle",
+    "save": "Değişiklikleri Kaydet",
+    "personalInfo": "Kişisel Bilgiler",
+    "contactInfo": "İletişim Bilgileri",
+    "medicalHistory": "Tıbbi Geçmiş"
+  }
+} 
