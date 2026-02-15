@@ -1,4 +1,5 @@
 # 🏥✨ Smart Clinic Website
+
 ---
 
 Welcome to **Smart Clinic Website** – your all-in-one solution for modern clinic management!  
