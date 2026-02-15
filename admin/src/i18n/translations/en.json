@@ -1,0 +1,77 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "logout": "Logout",
+    "language": "Language",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "profile": "Profile"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "doctors": "Doctors",
+    "patients": "Patients",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "totalAppointments": "Total Appointments",
+    "totalDoctors": "Total Doctors",
+    "totalPatients": "Total Patients",
+    "recentAppointments": "Recent Appointments",
+    "upcomingAppointments": "Upcoming Appointments",
+    "appointments": "Appointments",
+    "doctors": "Doctors",
+    "patients": "Patients",
+    "settings": "Settings"
+  },
+  "appointments": {
+    "all": "All Appointments",
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "cancelled": "Cancelled",
+    "completed": "Completed",
+    "date": "Date",
+    "time": "Time",
+    "patient": "Patient",
+    "doctor": "Doctor",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "doctors": {
+    "all": "All Doctors",
+    "add": "Add Doctor",
+    "edit": "Edit Doctor",
+    "name": "Name",
+    "speciality": "Speciality",
+    "email": "Email",
+    "phone": "Phone",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "patients": {
+    "all": "All Patients",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "lastVisit": "Last Visit",
+    "actions": "Actions"
+  },
+  "settings": {
+    "general": "General Settings",
+    "notifications": "Notifications",
+    "security": "Security",
+    "language": "Language Settings",
+    "save": "Save Changes"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "doctorLogin": "Doctor Login?",
+    "adminLogin": "Admin Login?",
+    "clickHere": "Click Here"
+  }
+} 

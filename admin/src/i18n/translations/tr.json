@@ -1,0 +1,77 @@
+{
+  "common": {
+    "welcome": "Hoş Geldiniz",
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "language": "Dil",
+    "dashboard": "Kontrol Paneli",
+    "settings": "Ayarlar",
+    "profile": "Profil"
+  },
+  "nav": {
+    "dashboard": "Kontrol Paneli",
+    "appointments": "Randevular",
+    "doctors": "Doktorlar",
+    "patients": "Hastalar",
+    "reports": "Raporlar",
+    "settings": "Ayarlar"
+  },
+  "dashboard": {
+    "totalAppointments": "Toplam Randevu",
+    "totalDoctors": "Toplam Doktor",
+    "totalPatients": "Toplam Hasta",
+    "recentAppointments": "Son Randevular",
+    "upcomingAppointments": "Yaklaşan Randevular",
+    "appointments": "Randevular",
+    "doctors": "Doktorlar",
+    "patients": "Hastalar",
+    "settings": "Ayarlar"
+  },
+  "appointments": {
+    "all": "Tüm Randevular",
+    "pending": "Bekleyen",
+    "confirmed": "Onaylanmış",
+    "cancelled": "İptal Edilmiş",
+    "completed": "Tamamlanmış",
+    "date": "Tarih",
+    "time": "Saat",
+    "patient": "Hasta",
+    "doctor": "Doktor",
+    "status": "Durum",
+    "actions": "İşlemler"
+  },
+  "doctors": {
+    "all": "Tüm Doktorlar",
+    "add": "Doktor Ekle",
+    "edit": "Doktor Düzenle",
+    "name": "İsim",
+    "speciality": "Uzmanlık",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "status": "Durum",
+    "actions": "İşlemler"
+  },
+  "patients": {
+    "all": "Tüm Hastalar",
+    "name": "İsim",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "lastVisit": "Son Ziyaret",
+    "actions": "İşlemler"
+  },
+  "settings": {
+    "general": "Genel Ayarlar",
+    "notifications": "Bildirimler",
+    "security": "Güvenlik",
+    "language": "Dil Ayarları",
+    "save": "Değişiklikleri Kaydet"
+  },
+  "auth": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "login": "Giriş Yap",
+    "doctorLogin": "Doktor Girişi?",
+    "adminLogin": "Yönetici Girişi?",
+    "clickHere": "Buraya Tıklayın"
+  }
+} 
