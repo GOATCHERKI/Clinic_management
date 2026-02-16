@@ -35,7 +35,6 @@ smart_clinic_website/
 ├── backend/
 │   └── .env
 ├── frontend/
-└── package.json
 
 ---
 
