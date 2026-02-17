@@ -86,4 +86,4 @@ smart_clinic_website/
 ```
 ---
 
-## ⚙️ Environment Variables
+Made with Care by Mohamed Zakaria Cherki.
