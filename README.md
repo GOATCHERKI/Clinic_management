@@ -63,11 +63,13 @@ Smart Clinic provides:
 
 **For recruiters testing the live demo:**
 
-| Role        | Email                     | Password    |
-| ----------- | ------------------------- | ----------- |
-| **Admin**   | `admin@demo.com`          | `qwerty123` |
-| **Doctor**  | `doctor@smartclinic.com`  | `Demo@123`  |
-| **Patient** | `patient@smartclinic.com` | `Demo@123`  |
+| Role        | Email                     | Password   |
+| ----------- | ------------------------- | ---------- |
+| **Doctor**  | `doctor@smartclinic.com`  | `Demo@123` |
+| **Patient** | `patient@smartclinic.com` | `Demo@123` |
+
+🔐 Admin Access:
+Available upon request.
 
 _These are demo-only accounts for testing purposes._
 
