@@ -32,6 +32,7 @@ const MyProfile = () => {
     if (userData) {
       fetchAppointments()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData])
 
   // Function to update user profile data using API
@@ -155,21 +156,23 @@ const MyProfile = () => {
   }
 
   return userData ? (
-    <div className="flex items-start justify-center mt-0 mb-0 min-h-screen w-full bg-white">
-      {/* Profile Card */}
-      <div className="w-full max-w-md flex flex-col gap-6 text-base bg-white p-8 rounded-2xl shadow-xl border border-blue-100 mr-8 mt-10 mb-10">
-        <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
-          <div className="relative">
+    <div className="min-h-screen w-full bg-gradient-to-br from-blue-50 to-white py-6 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Profile Card */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 text-sm sm:text-base bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl border border-blue-100">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-2 sm:mb-4">
+          <div className="relative shrink-0">
             {isEdit ? (
               <label htmlFor="image">
                 <div className="inline-block relative cursor-pointer">
                   <img
-                    className="w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg opacity-80"
+                    className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg opacity-80"
                     src={image ? URL.createObjectURL(image) : userData.image}
                     alt=""
                   />
                   <img
-                    className="w-10 absolute bottom-2 right-2"
+                    className="w-8 sm:w-10 absolute bottom-1 right-1 sm:bottom-2 sm:right-2"
                     src={image ? "" : images.upload_icon}
                     alt=""
                   />
@@ -183,16 +186,16 @@ const MyProfile = () => {
               </label>
             ) : (
               <img
-                className="w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
+                className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-4 border-blue-200 shadow-lg"
                 src={userData.image}
                 alt=""
               />
             )}
           </div>
-          <div className="flex-1 flex flex-col items-center sm:items-start">
+          <div className="flex-1 flex flex-col items-center sm:items-start w-full sm:w-auto">
             {isEdit ? (
               <input
-                className="bg-gray-50 text-1xl font-bold max-w-[230px] px-2 py-1 rounded border border-gray-200 focus:outline-blue-300"
+                className="bg-gray-50 text-lg sm:text-xl font-bold w-full sm:max-w-[230px] px-2 py-1 rounded border border-gray-200 focus:outline-blue-300"
                 type="text"
                 onChange={(e) =>
                   setUserData((prev) => ({ ...prev, name: e.target.value }))
@@ -200,11 +203,11 @@ const MyProfile = () => {
                 value={userData.name}
               />
             ) : (
-              <p className="font-bold text-2xl text-[#262626] mt-2 text-center sm:text-left">
+              <p className="font-bold text-xl sm:text-2xl text-[#262626] mt-2 text-center sm:text-left">
                 {userData.name}
               </p>
             )}
-            <p className="text-base text-blue-400 mt-1">{userData.email}</p>
+            <p className="text-sm sm:text-base text-blue-400 mt-1 break-all">{userData.email}</p>
           </div>
         </div>
 
@@ -217,11 +220,11 @@ const MyProfile = () => {
               CONTACT INFORMATION
             </p>
             <div className="flex flex-col gap-2 text-[#363636]">
-              <div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
                 <span className="font-medium">Phone:</span>
                 {isEdit ? (
                   <input
-                    className="bg-gray-50 max-w-40 ml-2 px-2 py-1 rounded border border-gray-200"
+                    className="bg-gray-50 w-full sm:max-w-40 sm:ml-2 px-2 py-1 rounded border border-gray-200"
                     type="text"
                     onChange={(e) =>
                       setUserData((prev) => ({
@@ -232,14 +235,14 @@ const MyProfile = () => {
                     value={userData.phone}
                   />
                 ) : (
-                  <span className="text-blue-500 ml-2">{userData.phone}</span>
+                  <span className="text-blue-500 sm:ml-2 break-all">{userData.phone}</span>
                 )}
               </div>
-              <div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
                 <span className="font-medium">Emergency Phone:</span>
                 {isEdit ? (
                   <input
-                    className="bg-gray-50 max-w-40 ml-2 px-2 py-1 rounded border border-gray-200"
+                    className="bg-gray-50 w-full sm:max-w-40 sm:ml-2 px-2 py-1 rounded border border-gray-200"
                     type="text"
                     onChange={(e) =>
                       setUserData((prev) => ({
@@ -250,7 +253,7 @@ const MyProfile = () => {
                     value={userData.emergency_phone}
                   />
                 ) : (
-                  <span className="text-blue-500 ml-2">
+                  <span className="text-blue-500 sm:ml-2 break-all">
                     {userData.emergency_phone}
                   </span>
                 )}
@@ -299,11 +302,11 @@ const MyProfile = () => {
               BASIC INFORMATION
             </p>
             <div className="flex flex-col gap-2 text-gray-600">
-              <div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
                 <span className="font-medium">Gender:</span>
                 {isEdit ? (
                   <select
-                    className="max-w-24 ml-2 bg-gray-50 px-2 py-1 rounded border border-gray-200"
+                    className="w-full sm:max-w-24 sm:ml-2 bg-gray-50 px-2 py-1 rounded border border-gray-200"
                     onChange={(e) =>
                       setUserData((prev) => ({
                         ...prev,
@@ -317,14 +320,14 @@ const MyProfile = () => {
                     <option value="Female">Female</option>
                   </select>
                 ) : (
-                  <span className="text-gray-500 ml-2">{userData.gender}</span>
+                  <span className="text-gray-500 sm:ml-2">{userData.gender}</span>
                 )}
               </div>
-              <div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
                 <span className="font-medium">Birthday:</span>
                 {isEdit ? (
                   <input
-                    className="max-w-32 ml-2 bg-gray-50 px-2 py-1 rounded border border-gray-200"
+                    className="w-full sm:max-w-32 sm:ml-2 bg-gray-50 px-2 py-1 rounded border border-gray-200"
                     type="date"
                     onChange={(e) =>
                       setUserData((prev) => ({
@@ -335,25 +338,25 @@ const MyProfile = () => {
                     value={userData.dob}
                   />
                 ) : (
-                  <span className="text-gray-500 ml-2">{userData.dob}</span>
+                  <span className="text-gray-500 sm:ml-2">{userData.dob}</span>
                 )}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-4 sm:mt-6">
           {isEdit ? (
             <button
               onClick={updateUserProfileData}
-              className="border border-green-400 px-8 py-2 rounded-full bg-green-400 text-white font-semibold text-base shadow hover:bg-green-500 transition-all duration-300"
+              className="w-full sm:w-auto border border-green-400 px-6 sm:px-8 py-2.5 rounded-full bg-green-400 text-white font-semibold text-sm sm:text-base shadow hover:bg-green-500 transition-all duration-300"
             >
               Save information
             </button>
           ) : (
             <button
               onClick={() => setIsEdit(true)}
-              className="border border-blue-400 px-8 py-2 rounded-full bg-blue-400 text-white font-semibold text-base shadow hover:bg-blue-500 transition-all duration-300"
+              className="w-full sm:w-auto border border-blue-400 px-6 sm:px-8 py-2.5 rounded-full bg-blue-400 text-white font-semibold text-sm sm:text-base shadow hover:bg-blue-500 transition-all duration-300"
             >
               Edit
             </button>
@@ -362,7 +365,7 @@ const MyProfile = () => {
       </div>
 
       {/* Medical History Card */}
-      <div className="w-full max-w-lg flex flex-col gap-6 text-base bg-white p-8 rounded-2xl shadow-xl border border-blue-100 mt-10 mb-10">
+      <div className="w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 text-sm sm:text-base bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl border border-blue-100">
         <p className="text-blue-600 font-semibold underline mb-2 tracking-wide">
           MEDICAL HISTORY
         </p>
@@ -377,11 +380,11 @@ const MyProfile = () => {
               {appointments
                 .filter(appointment => appointment.isCompleted && appointment.prescription)
                 .map((appointment, index) => (
-                  <div key={index} className="border rounded-lg p-4 bg-gray-50">
-                    <div className="flex justify-between items-start mb-2">
-                      <div>
-                        <p className="font-medium">Dr. {appointment.docData.name}</p>
-                        <p className="text-sm text-gray-600">
+                  <div key={index} className="border rounded-lg p-3 sm:p-4 bg-gray-50">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+                      <div className="flex-1">
+                        <p className="font-medium text-sm sm:text-base">Dr. {appointment.docData.name}</p>
+                        <p className="text-xs sm:text-sm text-gray-600">
                           {appointment.slotDate}, {appointment.slotTime}
                         </p>
                       </div>
@@ -389,7 +392,7 @@ const MyProfile = () => {
                         href={appointment.prescription}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-500 hover:text-blue-700 underline text-sm"
+                        className="text-blue-500 hover:text-blue-700 underline text-xs sm:text-sm whitespace-nowrap"
                       >
                         View Prescription
                       </a>
@@ -404,26 +407,26 @@ const MyProfile = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block mb-2 font-medium">Upload Additional Medical Files</label>
+          <label className="block mb-2 font-medium text-sm sm:text-base">Upload Additional Medical Files</label>
           <div className="flex flex-col gap-2">
             <input
               type="file"
-              className="block w-full text-sm text-gray-500
-                file:mr-4 file:py-2 file:px-4
+              className="block w-full text-xs sm:text-sm text-gray-500
+                file:mr-2 sm:file:mr-4 file:py-1.5 sm:file:py-2 file:px-3 sm:file:px-4
                 file:rounded-full file:border-0
-                file:text-sm file:font-semibold
+                file:text-xs sm:file:text-sm file:font-semibold
                 file:bg-blue-50 file:text-blue-700
                 hover:file:bg-blue-100"
               onChange={(e) => setSelectedFile(e.target.files[0])}
               disabled={uploading}
             />
             {selectedFile && (
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">{selectedFile.name}</span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <span className="text-xs sm:text-sm text-gray-600 break-all flex-1">{selectedFile.name}</span>
                 <button
                   onClick={handleMedicalFileUpload}
                   disabled={uploading}
-                  className="px-4 py-2 text-sm font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 disabled:bg-blue-300 disabled:cursor-not-allowed"
+                  className="px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 disabled:bg-blue-300 disabled:cursor-not-allowed whitespace-nowrap"
                 >
                   {uploading ? 'Uploading...' : 'Upload'}
                 </button>
@@ -432,33 +435,37 @@ const MyProfile = () => {
           </div>
         </div>
         <div>
-          <p className="font-medium mb-2">Additional Medical Files:</p>
-          <ul className="list-disc ml-6">
-            {medicalFiles.length === 0 && <li className="text-gray-400">No additional files uploaded yet.</li>}
+          <p className="font-medium mb-2 text-sm sm:text-base">Additional Medical Files:</p>
+          <ul className="list-disc ml-4 sm:ml-6 space-y-2">
+            {medicalFiles.length === 0 && <li className="text-gray-400 text-xs sm:text-sm">No additional files uploaded yet.</li>}
             {medicalFiles.map((file, idx) => (
-              <li key={idx} className="mb-2">
-                <div className="flex items-center gap-2">
+              <li key={idx} className="text-xs sm:text-sm">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
                   <a
                     href={file.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-700 underline"
+                    className="text-blue-500 hover:text-blue-700 underline break-all"
                   >
                     {file.name || `File ${idx + 1}`}
                   </a>
-                  <span className="text-sm text-gray-500">
-                    ({new Date(file.uploadedAt).toLocaleDateString()})
-                  </span>
-                  <button
-                    onClick={() => handleDeleteMedicalFile(file.url)}
-                    className="text-red-500 hover:text-red-700 text-sm"
-                  >
-                    Delete
-                  </button>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs sm:text-sm text-gray-500">
+                      ({new Date(file.uploadedAt).toLocaleDateString()})
+                    </span>
+                    <button
+                      onClick={() => handleDeleteMedicalFile(file.url)}
+                      className="text-red-500 hover:text-red-700 text-xs sm:text-sm font-medium"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               </li>
             ))}
           </ul>
+        </div>
+      </div>
         </div>
       </div>
     </div>

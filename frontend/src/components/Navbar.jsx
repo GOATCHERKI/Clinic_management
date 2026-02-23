@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center space-x-8">
+          <ul className="hidden lg:flex items-center space-x-8">
             <NavLink to="/" className={navLinkClasses} onClick={() => setShowMenu(false)}>
               <li className="group">
                 {t('nav.home')}
@@ -64,7 +64,8 @@ const Navbar = () => {
             </NavLink>
           </ul>
 
-          <div className='flex items-center gap-4'>
+          {/* Desktop Right Section */}
+          <div className='hidden lg:flex items-center gap-4'>
             <LanguageSwitcher />
             {token && userData ? (
               <div className="flex items-center gap-3 cursor-pointer group relative">
@@ -90,7 +91,7 @@ const Navbar = () => {
                         handleNavigation('/my-profile');
                         setShowMenu(false);
                       }}
-                      className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 text-left flex items-center gap-2"
+                      className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 text-left flex items-center gap-2 cursor-pointer"
                     >
                       <img src={images.profile} alt="Profile" className="w-4 h-4" />
                       {t('common.myProfile')}
@@ -100,7 +101,7 @@ const Navbar = () => {
                         handleNavigation('my-appointments');
                         setShowMenu(false);
                       }}
-                      className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 text-left flex items-center gap-2"
+                      className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 text-left flex items-center gap-2 cursor-pointer"
                     >
                       <img src={images.appointment} alt="Appointments" className="w-4 h-4" />
                       {t('common.myAppointments')}
@@ -110,7 +111,7 @@ const Navbar = () => {
                         handleNavigation('/chat');
                         setShowMenu(false);
                       }}
-                      className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 text-left flex items-center gap-2"
+                      className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 text-left flex items-center gap-2 cursor-pointer"
                     >
                       <img src={images.chat} alt="Chat" className="w-4 h-4" />
                       {t('common.chat')}
@@ -120,7 +121,7 @@ const Navbar = () => {
                         logout();
                         setShowMenu(false);
                       }}
-                      className="w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 text-left flex items-center gap-2"
+                      className="w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 text-left flex items-center gap-2 cursor-pointer"
                     >
                       <img src={images.logout} alt="Logout" className="w-4 h-4" />
                       {t('common.logout')}
@@ -133,7 +134,7 @@ const Navbar = () => {
                 onClick={() => {
                   navigate('/login');
                 }}
-                className="bg-blue-600 text-white px-4 sm:px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:scale-105"
+                className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:scale-105"
               >
                 {t('common.createAccount')}
               </button>
@@ -142,25 +143,26 @@ const Navbar = () => {
 
           {/* Hamburger menu button (mobile only) */}
           <button
-            className="md:hidden right-0 top-0 flex items-center justify-center p-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="lg:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onClick={() => setShowMenu(!showMenu)}
             aria-label="Toggle menu"
             type="button"
           >
-            <svg className="h-7 w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={showMenu ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>
         </div>
 
         {/* Mobile menu */}
-        <div className={`${showMenu ? 'block' : 'hidden'} md:hidden py-4`}>
-          <div className="flex flex-col space-y-2">
+        <div className={`${showMenu ? 'block' : 'hidden'} lg:hidden border-t border-gray-200`}>
+          <div className="py-3 space-y-1">
+            {/* Navigation Links */}
             <NavLink
               to="/"
               onClick={() => setShowMenu(false)}
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium ${
+                `block px-4 py-2 rounded-md text-base font-medium ${
                   isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`
               }
@@ -171,7 +173,7 @@ const Navbar = () => {
               to="/doctors"
               onClick={() => setShowMenu(false)}
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium ${
+                `block px-4 py-2 rounded-md text-base font-medium ${
                   isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`
               }
@@ -182,7 +184,7 @@ const Navbar = () => {
               to="/about"
               onClick={() => setShowMenu(false)}
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium ${
+                `block px-4 py-2 rounded-md text-base font-medium ${
                   isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`
               }
@@ -193,13 +195,92 @@ const Navbar = () => {
               to="/contact"
               onClick={() => setShowMenu(false)}
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium ${
+                `block px-4 py-2 rounded-md text-base font-medium ${
                   isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`
               }
             >
               {t('nav.contact')}
             </NavLink>
+
+            {/* Divider */}
+            <div className="border-t border-gray-200 my-2"></div>
+
+            {/* User Section for Mobile */}
+            {token && userData ? (
+              <>
+                <div className="px-4 py-2 flex items-center gap-3">
+                  <img 
+                    className="w-10 h-10 rounded-full border-2 border-gray-200" 
+                    src={userData.image} 
+                    alt="User" 
+                  />
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">{userData.name}</p>
+                    <p className="text-xs text-gray-500">{userData.email}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => {
+                    handleNavigation('/my-profile');
+                  }}
+                  className="w-full text-left px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 flex items-center gap-2"
+                >
+                  <img src={images.profile} alt="Profile" className="w-5 h-5" />
+                  {t('common.myProfile')}
+                </button>
+                <button
+                  onClick={() => {
+                    handleNavigation('my-appointments');
+                  }}
+                  className="w-full text-left px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 flex items-center gap-2"
+                >
+                  <img src={images.appointment} alt="Appointments" className="w-5 h-5" />
+                  {t('common.myAppointments')}
+                </button>
+                <button
+                  onClick={() => {
+                    handleNavigation('/chat');
+                  }}
+                  className="w-full text-left px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 flex items-center gap-2"
+                >
+                  <img src={images.chat} alt="Chat" className="w-5 h-5" />
+                  {t('common.chat')}
+                </button>
+                <button
+                  onClick={() => {
+                    logout();
+                  }}
+                  className="w-full text-left px-4 py-2 text-base font-medium text-red-600 hover:bg-red-50 flex items-center gap-2"
+                >
+                  <img src={images.logout} alt="Logout" className="w-5 h-5" />
+                  {t('common.logout')}
+                </button>
+              </>
+            ) : (
+              <div className="px-4 py-2">
+                <button
+                  onClick={() => {
+                    navigate('/login');
+                    setShowMenu(false);
+                  }}
+                  className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-full text-base font-medium hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {t('common.createAccount')}
+                </button>
+              </div>
+            )}
+
+            {/* Divider */}
+            <div className="border-t border-gray-200 my-2"></div>
+
+            {/* Language Switcher for Mobile */}
+            <div className="px-4 py-2">
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                Language
+              </p>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

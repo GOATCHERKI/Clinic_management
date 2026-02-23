@@ -64,10 +64,12 @@ const ChatPage = () => {
         return null;
     }
 
+    const isChatOpen = Boolean(selectedChat && selectedChat.doctor && selectedChat.user);
+
     return (
-        <div className="flex h-[calc(100vh-64px)] bg-gray-50">
+        <div className="flex flex-col lg:flex-row h-[calc(100vh-64px)] bg-gray-50">
             {/* Chat List */}
-            <div className="w-[400px] bg-white border-r border-gray-200 flex flex-col h-full">
+            <div className={`${isChatOpen ? 'hidden' : 'flex'} lg:flex w-full lg:w-[360px] xl:w-[400px] bg-white border-r border-gray-200 flex-col h-full`}>
                 <div className="p-4 border-b border-gray-200 bg-white">
                     <h2 className="text-xl font-semibold text-gray-800">Messages</h2>
                     <p className="text-sm text-gray-500 mt-1">Chat with your doctors</p>
@@ -78,9 +80,25 @@ const ChatPage = () => {
             </div>
 
             {/* Chat Window */}
-            <div className="flex-1 flex flex-col h-full items-center bg-gray-50">
-                {selectedChat && selectedChat.doctor && selectedChat.user ? (
-                    <div className="w-full max-w-4xl h-full border border-gray-300 rounded-lg overflow-hidden shadow-md">
+            <div className={`${isChatOpen ? 'flex' : 'hidden'} lg:flex flex-1 flex-col h-full items-center bg-gray-50`}>
+                {isChatOpen ? (
+                    <div className="w-full max-w-4xl h-full border border-gray-300 rounded-none lg:rounded-lg overflow-hidden shadow-none lg:shadow-md">
+                        <div className="lg:hidden flex items-center gap-2 px-4 py-3 bg-white border-b border-gray-200">
+                            <button
+                                onClick={handleCloseChat}
+                                className="inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                aria-label="Back to chat list"
+                                type="button"
+                            >
+                                <svg className="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <div className="min-w-0">
+                                <p className="text-sm font-semibold text-gray-900 truncate">Chat</p>
+                                <p className="text-xs text-gray-500 truncate">{selectedChat?.doctor?.name}</p>
+                            </div>
+                        </div>
                         <Chat
                             doctorId={selectedChat.doctor._id}
                             onClose={handleCloseChat}
