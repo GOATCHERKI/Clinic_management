@@ -120,21 +120,21 @@ const DoctorProfile = () => {
     }, [dToken])
 
     return profileData && (
-        <div className='min-h-screen bg-white p-6 h-full w-full'>
-            <div className='bg-white rounded-xl shadow-md overflow-hidden'>
+        <div className='min-h-screen bg-gray-50 px-4 sm:px-6 py-6 h-full w-full'>
+            <div className='max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden'>
                 <div className='flex flex-col'>
-                    <div className='w-full p-6 flex  '>
-                        <img className='h-48 w-100 object-cover rounded-lg shadow bg-primary' src={profileData.image} alt={`${profileData.name}'s profile`} />
+                    <div className='w-full p-4 sm:p-6 flex justify-center sm:justify-start'>
+                        <img className='h-40 w-40 sm:h-48 sm:w-48 object-cover rounded-lg shadow bg-primary' src={profileData.image} alt={`${profileData.name}'s profile`} />
                     </div>
-                    <div className='p-8'>
+                    <div className='p-4 sm:p-8'>
 
                         <div className='mb-4'>
                             <div className='text-2xl font-bold text-gray-800'>{profileData.name}</div>
-                            <div className='text-sm text-gray-600 mt-1 flex items-center gap-2'>
+                            <div className='text-sm text-gray-600 mt-1 flex flex-wrap items-center gap-2'>
                                 <span>{profileData.degree} - {profileData.speciality}</span>
                                 <span className='px-2 py-0.5 border border-blue-300 text-blue-600 text-xs rounded-full bg-blue-50'>{profileData.experience}</span>
                             </div>
-                            <div className='text-sm text-gray-600 mt-2 flex items-center gap-2'>
+                            <div className='text-sm text-gray-600 mt-2 flex items-center gap-2 break-all'>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
@@ -216,9 +216,9 @@ const DoctorProfile = () => {
                                                 onChange={(e) => setNewTimeSlot(prev => ({ ...prev, end: e.target.value }))}
                                             />
                                         </div>
-                                        <button
+                                            <button
                                             onClick={() => addTimeSlot(newTimeSlot.day)}
-                                            className='px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-150'
+                                                className='w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-150'
                                         >
                                             Add Working Hours
                                         </button>
