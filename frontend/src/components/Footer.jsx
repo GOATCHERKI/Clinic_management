@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import logoImg from '../assets/logo1(1).png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr] gap-12 mb-16">
           {/* Brand Section */}
           <div className="space-y-6">
-            <img className="w-40" src="src/assets/logo1(1).png" alt={t('footer.logoAlt')} />
+            <img className="w-40" src={logoImg} alt={t('footer.logoAlt')} />
             <p className="text-gray-600 text-sm leading-relaxed">
               {t('footer.description')}
             </p>

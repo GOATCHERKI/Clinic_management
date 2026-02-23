@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import heroBg from '../assets/kuh.jpg';
+import groupImg from '../assets/group.png';
+import heroImage from '../assets/heade.png';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -14,7 +17,7 @@ const Header = () => {
       {/* Background image with subtle dark overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 scale-105 filter blur-sm transform transition-transform duration-700"
-        style={{ backgroundImage: "url('src/assets/kuh.jpg')" }}
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70 z-0" />
 
@@ -45,7 +48,7 @@ const Header = () => {
             </h1>
 
             <div className="flex items-center gap-4 text-white/90 text-sm mt-2 hover:transform hover:translate-x-2 transition-transform duration-300">
-              <img className="w-28 opacity-90" src="src/assets/group.png" alt={t('header.healthcareTeam')} />
+              <img className="w-28 opacity-90" src={groupImg} alt={t('header.healthcareTeam')} />
               <p className="font-light leading-relaxed">
                 {t('header.expertCare')}
               </p>
@@ -88,7 +91,7 @@ const Header = () => {
             <div className="w-full lg:w-full md:w-[90%] ml-auto">
               <img
                 className='w-full rounded-2xl shadow-2xl transform transition-all duration-700 hover:scale-[1.02]'
-                src="src/assets/heade.png"
+                src={heroImage}
                 alt={t('header.healthcareIllustration')}
               />
 

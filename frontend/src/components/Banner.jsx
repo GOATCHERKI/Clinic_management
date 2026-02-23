@@ -1,5 +1,5 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import heroDoctor from '../assets/doc4.png';
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Banner = () => {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
         <img
           className="w-full h-full object-contain absolute bottom-0 right-0 drop-shadow-2xl"
-          src="src/assets/doc4.png"
+          src={heroDoctor}
           alt="Doctor"
         />
       </div>
