@@ -80,25 +80,9 @@ const ChatPage = () => {
             </div>
 
             {/* Chat Window */}
-            <div className={`${isChatOpen ? 'flex' : 'hidden'} lg:flex flex-1 flex-col h-full items-center bg-gray-50`}>
+            <div className={`${isChatOpen ? 'flex' : 'hidden'} lg:flex flex-1 flex-col h-full items-center bg-gray-50 min-h-0`}>
                 {isChatOpen ? (
-                    <div className="w-full max-w-4xl h-full border border-gray-300 rounded-none lg:rounded-lg overflow-hidden shadow-none lg:shadow-md">
-                        <div className="lg:hidden flex items-center gap-2 px-4 py-3 bg-white border-b border-gray-200">
-                            <button
-                                onClick={handleCloseChat}
-                                className="inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                aria-label="Back to chat list"
-                                type="button"
-                            >
-                                <svg className="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <div className="min-w-0">
-                                <p className="text-sm font-semibold text-gray-900 truncate">Chat</p>
-                                <p className="text-xs text-gray-500 truncate">{selectedChat?.doctor?.name}</p>
-                            </div>
-                        </div>
+                    <div className="w-full max-w-4xl h-full flex flex-col border border-gray-300 rounded-none lg:rounded-lg overflow-hidden shadow-none lg:shadow-md">
                         <Chat
                             doctorId={selectedChat.doctor._id}
                             onClose={handleCloseChat}
