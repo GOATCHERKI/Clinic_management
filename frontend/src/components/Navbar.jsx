@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img onClick={() => handleNavigation('/')} className="h-8 w-auto cursor-pointer" src="src/assets/logo1(1).png" alt="Smart Clinic Logo" />
+            <img onClick={() => handleNavigation('/')} className="h-8 w-auto cursor-pointer" src={images.logo} alt="Smart Clinic Logo" />
           </div>
 
           {/* Desktop Navigation */}
