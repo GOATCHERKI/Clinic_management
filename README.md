@@ -21,55 +21,79 @@ Smart Clinic provides:
 ## ✨ Features
 
 ### 👨‍💼 Admin Portal
+
 - Manage doctors and patients
 - Monitor appointments
 - View system analytics
 - Platform-wide management control
 
 ### 👩‍⚕️ Doctor Portal
+
 - View upcoming appointments
 - Upload prescriptions
 - Access patient medical records
 - Chat with patients in real-time
 
 ### 🧑‍💻 Patient Portal
+
 - Book appointments
 - Upload & manage medical documents
 - View prescriptions
 - Real-time chat with doctors
 
 ### 💬 Real-Time Messaging
+
 - Built with Socket.IO
 - Secure and instant communication
 
 ### 📧 Email Notifications
+
 - Appointment confirmations
 - Automated reminders
 - Powered by Gmail SMTP (Nodemailer)
 
 ### ☁️ Cloud Storage
+
 - Secure file uploads via Cloudinary
 - Optimized document & image management
+
+---
+
+## 🧪 Demo Credentials
+
+**For recruiters testing the live demo:**
+
+| Role        | Email                     | Password    |
+| ----------- | ------------------------- | ----------- |
+| **Admin**   | `admin@demo.com`          | `qwerty123` |
+| **Doctor**  | `doctor@smartclinic.com`  | `Demo@123`  |
+| **Patient** | `patient@smartclinic.com` | `Demo@123`  |
+
+_These are demo-only accounts for testing purposes._
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React
 - Vite
 - Tailwind CSS
 
 ### Backend
+
 - Node.js
 - Express.js
 - MongoDB
 - Socket.IO
 
 ### Authentication
+
 - JWT (JSON Web Tokens)
 
 ### Services
+
 - Cloudinary (Cloud Storage)
 - Nodemailer (Email Service)
 
@@ -84,6 +108,7 @@ smart_clinic_website/
 │   └── .env
 ├── frontend/
 ```
+
 ---
 
 Made with Care by Mohamed Zakaria Cherki.
