@@ -1,9 +1,16 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useMemo } from 'react';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { io } from 'socket.io-client';
+
+// Compute Socket.IO base URL (strip trailing "/api" if present)
+const getSocketUrl = (backendUrl) => {
+    const raw = backendUrl || import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+    const trimmed = raw.replace(/\/+$/, '');
+    return trimmed.replace(/\/api$/, '');
+};
 
 const formatTime = (date) => {
     return new Intl.DateTimeFormat('en-US', {
@@ -18,12 +25,15 @@ const ChatList = ({ onSelectChat }) => {
     const [loading, setLoading] = useState(true);
     const { userData, backendUrl, token } = useContext(AppContext);
 
-    // Create socket instance (ensure this uses your backend URL)
-    const socket = io(backendUrl || 'http://localhost:4000', {
-        reconnectionAttempts: 3,
-        reconnectionDelay: 1000,
-        timeout: 5000
-    });
+    // Create socket instance once per backendUrl
+    const socket = useMemo(() => {
+        const url = getSocketUrl(backendUrl);
+        return io(url, {
+            reconnectionAttempts: 3,
+            reconnectionDelay: 1000,
+            timeout: 5000
+        });
+    }, [backendUrl]);
 
     useEffect(() => {
         console.log('ChatList useEffect triggered.');

@@ -5,7 +5,16 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { io } from 'socket.io-client';
 
-const socket = io(import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000');
+// Compute Socket.IO base URL (strip trailing "/api" if present)
+const getSocketUrl = () => {
+    const raw = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+    // Remove trailing slashes
+    const trimmed = raw.replace(/\/+$/, '');
+    // If backend URL ends with "/api", strip it for websocket base
+    return trimmed.replace(/\/api$/, '');
+};
+
+const socket = io(getSocketUrl());
 
 const formatTime = (date) => {
     return new Intl.DateTimeFormat('en-US', {

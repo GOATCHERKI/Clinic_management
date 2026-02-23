@@ -5,6 +5,13 @@ import { DoctorContext } from '../context/DoctorContext';
 import PropTypes from 'prop-types';
 import { io } from 'socket.io-client';
 
+// Compute Socket.IO base URL (strip trailing "/api" if present)
+const getSocketUrl = (backendUrl) => {
+    const raw = backendUrl || import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+    const trimmed = raw.replace(/\/+$/, '');
+    return trimmed.replace(/\/api$/, '');
+};
+
 const formatTime = (date) => {
     return new Intl.DateTimeFormat('en-US', {
         hour: 'numeric',
@@ -28,7 +35,8 @@ const Chat = ({ doctorId, userId, onClose }) => {
     // Initialize socket with doctor token
     const socket = useMemo(() => {
         if (dToken) {
-            return io(backendUrl || 'http://localhost:4000', {
+            const url = getSocketUrl(backendUrl);
+            return io(url, {
                 auth: {
                     token: dToken
                 }
