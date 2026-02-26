@@ -4,11 +4,14 @@
 
 Smart Clinic is a secure, scalable, and user-friendly healthcare platform that simplifies appointment booking, prescription management, real-time chat, and secure medical file storage.
 
+## 🌐 Live Demo
 
-Link: https://smart-clinic-eta.vercel.app
-Portal: https://clinic-management-portal.vercel.app
+🔗 [Patient App](https://smart-clinic-eta.vercel.app)  
+🔗 [Admin & Doctor Portal](https://clinic-management-portal.vercel.app)
+
+📌 Use the demo credentials below to test the system.
 ---
-
+a
 ## 🚀 Overview
 
 Smart Clinic provides:
