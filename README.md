@@ -119,4 +119,4 @@ smart_clinic_website/
 
 ---
 
-Made with Care by Mohamed Zakaria Cherki.
+Made with ❤️ by Mohamed Zakaria Cherki
